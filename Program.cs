@@ -31,7 +31,7 @@ while (talking == true)
     {
         Console.Write("Sports sound like fun! I've never played one of course, What's your favourite sport? ");
         favsport = Console.ReadLine();
-        Console.Write($"{favsport}? Cool! is that the one with the ball? Sorry I don't actually know that much about sports.\nDo you want to talk about anything else? ");
+        Console.Write($"{favsport}? Cool! Is that the one with the ball? Sorry I don't actually know that much about sports.\nDo you want to talk about anything else? ");
         conversation = Console.ReadLine();
         if (conversation == "bye" || conversation == "goodbye" || conversation == "cya" || conversation == "Bye" || conversation == "Goodbye" || conversation == "no")
         {
@@ -136,7 +136,7 @@ while (talking == true)
     }
     else if (conversation == "you" || conversation == npcname)
     {
-        Console.Write($"You want to talk about me? Well you decided to name me {npcname}\nWell, other than that, there isn't too much else to know about me.\nWell I guess I have a few favourite movies and a video game but apart from that...\nSo do you want to talk about anything else? ");
+        Console.Write($"You want to talk about me? Well you decided to name me {npcname}\nOther than that, there isn't too much else to know about me.\nI guess I have a few favourite movies and a video game but apart from that...\nSo do you want to talk about anything else? ");
         conversation = Console.ReadLine();
     }
     else
