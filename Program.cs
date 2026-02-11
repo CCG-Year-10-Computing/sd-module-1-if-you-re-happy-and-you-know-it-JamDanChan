@@ -73,60 +73,40 @@ while (talking == true)
     {
         if (favsport != null && favmovie != null && favvidgame != null)
         {
-            Console.Write($"Well {name}, I know that your favourite sport is {favsport}, your favourite movie is {favmovie}\nand your favourite video game is {favvidgame}! Is there anything else I should know about you? ");
-            misc = Console.ReadLine();
-            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about? ");
-            conversation = Console.ReadLine();
+            Console.Write($"Well {name}, I know that your favourite sport is {favsport}, your favourite movie is {favmovie}\nand your favourite video game is {favvidgame}!");
         }
         else if (favsport != null && favmovie != null)
         {
-            Console.Write($"Well {name}, I know that your favourite sport is {favsport} and your favourite movie is {favmovie}!\nIs there anything else I should know about you? ");
-            misc = Console.ReadLine();
-            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about? ");
-            conversation = Console.ReadLine();
+            Console.Write($"Well {name}, I know that your favourite sport is {favsport} and your favourite movie is {favmovie}!");
         }
         else if (favsport != null && favvidgame != null)
         {
-            Console.Write($"Well {name}, I know that your favourite sport is {favsport} and your favourite video game is {favvidgame}!\nIs there anything else I should know about you? ");
-            misc = Console.ReadLine();
-            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about (Sports, Movies, Video Games)? ");
-            conversation = Console.ReadLine();
+            Console.Write($"Well {name}, I know that your favourite sport is {favsport} and your favourite video game is {favvidgame}!");
         }
         else if (favmovie != null && favvidgame != null)
         {
-            Console.Write($"Well {name}, I know that your favourite movie is {favmovie} and your favourite video game is {favvidgame}!\nIs there anything else I should know about you? ");
-            misc = Console.ReadLine();
-            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about (Sports, Movies, Video Games)? ");
-            conversation = Console.ReadLine();
+            Console.Write($"Well {name}, I know that your favourite movie is {favmovie} and your favourite video game is {favvidgame}!");
         }
         else if (favsport != null)
         {
-            Console.Write($"Well {name}, I know that your favourite sport is {favsport}!\nIs there anything else I should know about you? ");
-            misc = Console.ReadLine();
-            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about (Sports, Movies, Video Games)? ");
-            conversation = Console.ReadLine();
+            Console.Write($"Well {name}, I know that your favourite sport is {favsport}!");
         }
         else if (favmovie != null)
         {
-            Console.Write($"Well {name}, I know that your favourite movie is {favmovie}!\nIs there anything else I should know about you? ");
-            misc = Console.ReadLine();
-            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about (Sports, Movies, Video Games)? ");
-            conversation = Console.ReadLine();
+            Console.Write($"Well {name}, I know that your favourite movie is {favmovie}!");
         }
         else if (favvidgame != null)
         {
-            Console.Write($"Well {name}, I know that your favourite video game is {favvidgame}!\nIs there anything else I should know about you? ");
-            misc = Console.ReadLine();
-            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about (Sports, Movies, Video Games)? ");
-            conversation = Console.ReadLine();
+            Console.Write($"Well {name}, I know that your favourite video game is {favvidgame}!");
         }
         else
         {
-            Console.Write($"Well {name}, I don't actually know that much about you.\nIs there anything I should know about you? ");
-            misc = Console.ReadLine();
-            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about (Sports, Movies, Video Games)? ");
-            conversation = Console.ReadLine();
+            Console.Write($"Well {name}, I don't actually know that much about you.");
         }
+        Console.Write(" Is there anything else I should know about you? ");
+            misc = Console.ReadLine();
+        Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about? ");
+        conversation = Console.ReadLine();
 
     }
     else if (conversation == "you" || conversation == npcname)
