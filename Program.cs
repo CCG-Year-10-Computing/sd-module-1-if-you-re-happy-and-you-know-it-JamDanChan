@@ -17,7 +17,7 @@ Console.Write("Hi there! What's your name? ");
 name = Console.ReadLine();
 Console.Write($"{name}? That's a great name! What should my name be? ");
 npcname = Console.ReadLine();
-Console.Write($"{npcname}? I like that name a lot! Thanks {name}!\nSo what should we talk about? ");
+Console.Write($"{npcname}? I like that name a lot! Thanks {name}!\nSo what should we talk about (Sports, Movies, Video Games)? ");
 conversation = Console.ReadLine();
 
 while (talking == true)
@@ -31,7 +31,7 @@ while (talking == true)
     {
         Console.Write("Sports sound like fun! I've never played one of course, What's your favourite sport? ");
         favsport = Console.ReadLine();
-        Console.Write($"{favsport}? Cool! Is that the one with the ball? Sorry I don't actually know that much about sports.\nDo you want to talk about anything else? ");
+        Console.Write($"{favsport}? Cool! Is that the one with the ball? Sorry I don't actually know that much about sports.\nDo you want to talk about anything else (Sports, Movies, Video Games)? ");
         conversation = Console.ReadLine();
     }
     else if (conversation == "movies")
@@ -40,12 +40,12 @@ while (talking == true)
         favmovie = Console.ReadLine();
         if (favmovie == "transformers" || favmovie == "the matrix" || favmovie == "Transformers" || favmovie == "The Matrix" || conversation == "matrix" || favmovie == "The Matrix")
         {
-            Console.Write($"Wow you like {favmovie} too? Isn't it so cool? The effects are awesome!\nSo what else do you want to talk about? ");
+            Console.Write($"Wow you like {favmovie} too? Isn't it so cool? The effects are awesome!\nSo what else do you want to talk about (Sports, Movies, Video Games)? ");
             conversation = Console.ReadLine();
         }
         else
         {
-            Console.Write($"{favmovie}? I've never heard of it, but if it's anything like my favourite movies it must be pretty good!\nSo what else do you want to talk about? ");
+            Console.Write($"{favmovie}? I've never heard of it, but if it's anything like my favourite movies it must be pretty good!\nSo what else do you want to talk about (Sports, Movies, Video Games)? ");
             conversation = Console.ReadLine();
         }
     }
@@ -89,54 +89,54 @@ while (talking == true)
         {
             Console.Write($"Well {name}, I know that your favourite sport is {favsport} and your favourite video game is {favvidgame}!\nIs there anything else I should know about you? ");
             misc = Console.ReadLine();
-            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about? ");
+            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about (Sports, Movies, Video Games)? ");
             conversation = Console.ReadLine();
         }
         else if (favmovie != null && favvidgame != null)
         {
             Console.Write($"Well {name}, I know that your favourite movie is {favmovie} and your favourite video game is {favvidgame}!\nIs there anything else I should know about you? ");
             misc = Console.ReadLine();
-            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about? ");
+            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about (Sports, Movies, Video Games)? ");
             conversation = Console.ReadLine();
         }
         else if (favsport != null)
         {
             Console.Write($"Well {name}, I know that your favourite sport is {favsport}!\nIs there anything else I should know about you? ");
             misc = Console.ReadLine();
-            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about? ");
+            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about (Sports, Movies, Video Games)? ");
             conversation = Console.ReadLine();
         }
         else if (favmovie != null)
         {
             Console.Write($"Well {name}, I know that your favourite movie is {favmovie}!\nIs there anything else I should know about you? ");
             misc = Console.ReadLine();
-            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about? ");
+            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about (Sports, Movies, Video Games)? ");
             conversation = Console.ReadLine();
         }
         else if (favvidgame != null)
         {
             Console.Write($"Well {name}, I know that your favourite video game is {favvidgame}!\nIs there anything else I should know about you? ");
             misc = Console.ReadLine();
-            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about? ");
+            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about (Sports, Movies, Video Games)? ");
             conversation = Console.ReadLine();
         }
         else
         {
             Console.Write($"Well {name}, I don't actually know that much about you.\nIs there anything I should know about you? ");
             misc = Console.ReadLine();
-            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about? ");
+            Console.Write($"{misc}? Wow that's awesome! At least I think it is. So what else do you want to talk about (Sports, Movies, Video Games)? ");
             conversation = Console.ReadLine();
         }
 
     }
     else if (conversation == "you" || conversation == npcname)
     {
-        Console.Write($"You want to talk about me? Well you decided to name me {npcname}\nOther than that, there isn't too much else to know about me.\nI guess I have a few favourite movies and a video game but apart from that...\nSo do you want to talk about anything else? ");
+        Console.Write($"You want to talk about me? Well you decided to name me {npcname}\nOther than that, there isn't too much else to know about me.\nI guess I have a few favourite movies and a video game but apart from that...\nSo do you want to talk about anything else (Sports, Movies, Video Games)? ");
         conversation = Console.ReadLine();
     }
     else
     {
-        Console.Write("Sorry I don't know anything about that, do you want to talk about something else? ");
+        Console.Write("Sorry I don't know anything about that, do you want to talk about something else (Sports, Movies, Video Games)? ");
         conversation = Console.ReadLine();
     }
 
