@@ -33,11 +33,6 @@ while (talking == true)
         favsport = Console.ReadLine();
         Console.Write($"{favsport}? Cool! Is that the one with the ball? Sorry I don't actually know that much about sports.\nDo you want to talk about anything else? ");
         conversation = Console.ReadLine();
-        if (conversation == "bye" || conversation == "goodbye" || conversation == "cya" || conversation == "Bye" || conversation == "Goodbye" || conversation == "no")
-        {
-            Console.Write($"Oh alright then, see you later {name}!");
-            talking = false;
-        }
     }
     else if (conversation == "movies")
     {
