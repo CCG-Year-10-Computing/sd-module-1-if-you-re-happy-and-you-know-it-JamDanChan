@@ -4,6 +4,7 @@
 
 using System.ComponentModel.Design;
 
+//Set all the variables
 string name;
 string npcname;
 string conversation;
@@ -13,6 +14,7 @@ string favmovie = null;
 string favvidgame = null;
 string misc;
 
+//Introduce the chatbot and get the user to choose their name as well as the chatbots
 Console.Write("Hi there! What's your name? ");
 name = Console.ReadLine();
 Console.Write($"{name}? That's a great name! What should my name be? ");
@@ -20,13 +22,16 @@ npcname = Console.ReadLine();
 Console.Write($"{npcname}? I like that name a lot! Thanks {name}!\nSo what should we talk about (Sports, Movies, Video Games)? ");
 conversation = Console.ReadLine();
 
+//Conversation loop
 while (talking == true)
 {
+    //If the user enters nothing
     if (conversation == "")
     {
         Console.Write("Sorry I couldn't quite hear that, what did you want to talk about? ");
         conversation = Console.ReadLine();
     }
+    //If the user enters "sports"
     else if (conversation == "sports")
     {
         Console.Write("Sports sound like fun! I've never played one of course, What's your favourite sport? ");
@@ -34,6 +39,7 @@ while (talking == true)
         Console.Write($"{favsport}? Cool! Is that the one with the ball? Sorry I don't actually know that much about sports.\nDo you want to talk about anything else (Sports, Movies, Video Games)? ");
         conversation = Console.ReadLine();
     }
+    //If the user enters "movies"
     else if (conversation == "movies")
     {
         Console.Write("Movies are really cool aren't they?\nThe only movies I've seen have been the Transformers and the Matrix movies but they were great!\nWhat's your favourite movie? ");
@@ -49,11 +55,13 @@ while (talking == true)
             conversation = Console.ReadLine();
         }
     }
+    //If the user enters "bye", "goodbye" etc.
     else if (conversation == "bye" || conversation == "goodbye" || conversation == "cya" || conversation == "Bye" || conversation == "Goodbye" || conversation == "no")
     {
         Console.Write($"Oh alright then, see you later {name}!");
         talking = false;
     }
+    //If the user enters "video games
     else if (conversation == "video games")
     {
         Console.Write("The only video game I've played is Detroit: Become Human, but I must've played it hundreds of times!\nWhat's your favourite video game? ");
@@ -69,8 +77,10 @@ while (talking == true)
             conversation = Console.ReadLine();
         }
     }
+    //If the user enters "me" or the variable "name"
     else if (conversation == "me" || conversation == name)
     {
+        //All of this checks if the variables "favsport", "favmovie" and "favvidgame" equal null, and depending on which and how many don't equal null it will print one of the following chunks of code
         if (favsport != null && favmovie != null && favvidgame != null)
         {
             Console.Write($"Well {name}, I know that your favourite sport is {favsport}, your favourite movie is {favmovie}\nand your favourite video game is {favvidgame}!");
@@ -109,11 +119,13 @@ while (talking == true)
         conversation = Console.ReadLine();
 
     }
+    //If the user enters "you" or the variable "npcname"
     else if (conversation == "you" || conversation == npcname)
     {
         Console.Write($"You want to talk about me? Well you decided to name me {npcname}\nOther than that, there isn't too much else to know about me.\nI guess I have a few favourite movies and a video game but apart from that...\nSo do you want to talk about anything else (Sports, Movies, Video Games)? ");
         conversation = Console.ReadLine();
     }
+    //If the user enters something that isn't recognised by the program
     else
     {
         Console.Write("Sorry I don't know anything about that, do you want to talk about something else (Sports, Movies, Video Games)? ");
