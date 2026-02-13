@@ -34,6 +34,7 @@ while (talking == true)
     //If the user enters "sports"
     else if (conversation == "sports")
     {
+        //Defines favsport
         Console.Write("Sports sound like fun! I've never played one of course, What's your favourite sport? ");
         favsport = Console.ReadLine();
         Console.Write($"{favsport}? Cool! Is that the one with the ball? Sorry I don't actually know that much about sports.\nDo you want to talk about anything else (Sports, Movies, Video Games)? ");
@@ -42,8 +43,10 @@ while (talking == true)
     //If the user enters "movies"
     else if (conversation == "movies")
     {
+        //Defines favmovie
         Console.Write("Movies are really cool aren't they?\nThe only movies I've seen have been the Transformers and the Matrix movies but they were great!\nWhat's your favourite movie? ");
         favmovie = Console.ReadLine();
+        //If favmovie is "transformers" or "the matrix" etc. it'll print the first chunk of code, else it'll print the second chunk
         if (favmovie == "transformers" || favmovie == "the matrix" || favmovie == "Transformers" || favmovie == "The Matrix" || conversation == "matrix" || favmovie == "The Matrix")
         {
             Console.Write($"Wow you like {favmovie} too? Isn't it so cool? The effects are awesome!\nSo what else do you want to talk about (Sports, Movies, Video Games)? ");
@@ -64,8 +67,10 @@ while (talking == true)
     //If the user enters "video games
     else if (conversation == "video games")
     {
+        //Defines favvidgame
         Console.Write("The only video game I've played is Detroit: Become Human, but I must've played it hundreds of times!\nWhat's your favourite video game? ");
         favvidgame = Console.ReadLine();
+        //If favvidgame is "Detroit: Become Human" or "detroit become human" etc. it'll print the first chunk of code, else it'll print the second chunk
         if (favvidgame == "Detroit: Become Human" || favvidgame == "detroit: become human" || favvidgame == "detroit become human")
         {
             Console.Write("Wow you like Detroit: Become Human too? Isn't it awesome how you can make your own choices? So what else do you want to talk about? ");
@@ -80,7 +85,7 @@ while (talking == true)
     //If the user enters "me" or the variable "name"
     else if (conversation == "me" || conversation == name)
     {
-        //All of this checks if the variables "favsport", "favmovie" and "favvidgame" equal null, and depending on which and how many don't equal null it will print one of the following chunks of code
+        //All of this checks if the variables "favsport", "favmovie" and "favvidgame" equal null, and depending on which and how many don't equal null it will print one of the following lines of code
         if (favsport != null && favmovie != null && favvidgame != null)
         {
             Console.Write($"Well {name}, I know that your favourite sport is {favsport}, your favourite movie is {favmovie}\nand your favourite video game is {favvidgame}!");
